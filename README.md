@@ -3,6 +3,7 @@
 <a href="https://www.dartgallery.site/">![Mock Up](https://github.com/Goorm-Lucky7/Dart_FE/assets/110087099/22bbf4a6-da3f-4570-b29b-604a7d6ff1d8)
 </a>
 <br/>
+<img src="https://github.com/user-attachments/assets/c8bbf3e9-678d-42a5-8802-f2fdfff997fd" />
 
 **프로젝트 기간** : 2024.05.22 ~ 2024.07.11
 
