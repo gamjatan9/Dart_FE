@@ -118,7 +118,7 @@
 
 | ![강신범](https://github.com/kangsinbeom.png)                                     | ![김수현](https://github.com/gamjatan9.png)                       | ![하승진](https://github.com/j2an777.png)                        |
 | --------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [강신범](https://github.comz/kangsinbeom)                                          | [김수현](https://github.com/gamjatan9)                            | [하승진](https://github.com/j2an777)                             |
+| [강신범](https://github.com/kangsinbeom)                                          | [김수현](https://github.com/gamjatan9)                            | [하승진](https://github.com/j2an777)                             |
 | **FrontEnd**                                                                      | **FrontEnd**                                                      | **FrontEnd**                                                     |
 | FE 팀장, 에러처리, 데이터와 토큰 관리, 배포, 메인 페이지, 공통 컴포넌트와 훅 생성 | 폼 관리, 실시간 채팅, 결제 시스템, 전시 생성 페이지, 회원정보조회 | 전시 템플릿, 회원정보 수정, 모달 기능, 저작권 침해 방지 마련, 전시 생성 ux 강화 |
 
