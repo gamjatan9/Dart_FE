@@ -5,7 +5,7 @@
 <br/><br/>
 <img src="https://github.com/user-attachments/assets/c8bbf3e9-678d-42a5-8802-f2fdfff997fd" />
 
-**프로젝트 기간** : 2024.05.22 ~ 2024.07.11
+**프로젝트 기간** : 2024.05.22 ~ 현재 진행 중
 
 🔗 [D'art 서비스 둘러보기](https://www.dartgallery.site/) (데스크탑/태블릿/모바일 환경에서 이용 가능)
 
