@@ -1,5 +1,4 @@
 import GalleryHeader from './components/galleryHeader';
-import * as S from './styles';
 import LogoLoader from '@/components/logoLoader';
 import { useParams } from 'react-router-dom';
 import { getGallery } from '@/apis/gallery';
@@ -7,15 +6,19 @@ import { useQuery } from '@tanstack/react-query';
 import SelectTemplate from './hooks/selectTemplate';
 import useCustomNavigate from '@/hooks/useCustomNavigate';
 import { useEffect } from 'react';
-import { ChatPortal } from '@/components';
-import { alertStore } from '@/stores/modal';
+import { ContentPortal } from '@/components';
+import { alertStore, useChatStore } from '@/stores/modal';
 import ErrorData from '../editMemberInfo/components/errorData';
+import ChatModal from '../chatModal';
+
+import * as S from './styles';
 
 const GalleryPage = () => {
   const { galleryId: galleryIdStr } = useParams<{ galleryId?: string }>();
   const galleryId = galleryIdStr ? parseInt(galleryIdStr, 10) : NaN;
   const navigate = useCustomNavigate();
-  const open = alertStore((state) => state.open);
+  const { closeModal, modalProps, open } = useChatStore();
+  const openAlert = alertStore((state) => state.open);
 
   const {
     data: galleryData,
@@ -38,7 +41,6 @@ const GalleryPage = () => {
     const currentURL = window.location.pathname;
 
     if (currentURL.includes(`/gallery/${galleryId}`)) {
-
       const handleContextMenu = (e: MouseEvent) => {
         e.preventDefault();
       };
@@ -46,7 +48,7 @@ const GalleryPage = () => {
       const handlePrintScreen = (e: KeyboardEvent) => {
         if (e.key === 'PrintScreen') {
           navigator.clipboard.writeText('');
-          open({
+          openAlert({
             title: '스크린샷',
             description: '전시 내에서는 스크린샷 불가능합니다.',
             buttonLabel: '확인',
@@ -68,7 +70,7 @@ const GalleryPage = () => {
         document.removeEventListener('keyup', handlePrintScreen);
       };
     }
-  }, [galleryId, open]);
+  }, [galleryId, openAlert]);
 
   if (error) {
     return <ErrorData retry={refetch} />;
@@ -93,7 +95,12 @@ const GalleryPage = () => {
         nickName={galleryData.nickname}
       />
       <SelectTemplate template={galleryData.template} galleryData={galleryData} />
-      <ChatPortal />
+      <ContentPortal
+        component={ChatModal}
+        closeModal={closeModal}
+        open={open}
+        modalProps={modalProps}
+      />
     </S.Container>
   );
 };

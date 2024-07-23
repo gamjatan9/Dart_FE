@@ -1,19 +1,14 @@
-import { checkModalStore } from '@/stores/modal';
 import { Button, Dimmed, Text } from '@/components';
 
 import * as S from './styles';
 
 interface CheckModalProps {
-  open: boolean;
   title: React.ReactNode;
   content?: React.ReactNode;
+  close: () => void;
 }
 
-const CheckModal = ({ open, title, content }: CheckModalProps) => {
-  const close = checkModalStore((state) => state.close);
-
-  if (!open) return;
-
+const CheckModal = ({ title, content, close }: CheckModalProps) => {
   return (
     <Dimmed style={{ zIndex: 9 }}>
       <S.Container>

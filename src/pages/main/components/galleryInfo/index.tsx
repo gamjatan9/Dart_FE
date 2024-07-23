@@ -13,7 +13,7 @@ import { starRate } from '../../hooks/starRate';
 import { CircleLoader } from '@/components';
 
 interface GalleryInfoProps {
-  galleryId: number | null;
+  galleryId: number | null | undefined;
   open: boolean;
   hasEnded: boolean;
   close: () => void;
@@ -64,7 +64,8 @@ const GalleryInfo = ({ galleryId, open: isOpen, hasEnded, close }: GalleryInfoPr
   if (error) {
     openModal({
       title: '오류',
-      description: '데이터 로드 중 오류가 발생했습니다. 새로고침 하시거나 재로그인 해주세요.',
+      description:
+        '데이터 로드 중 오류가 발생했습니다. 새로고침 하시거나 재로그인 해주세요.',
       buttonLabel: '확인',
       onClickButton: () => close(),
     });
@@ -96,8 +97,13 @@ const GalleryInfo = ({ galleryId, open: isOpen, hasEnded, close }: GalleryInfoPr
       <S.Container>
         <S.InfoBox thumbnail={data.thumbnail}>
           <S.Overlay />
-          <S.CancelIcon value="cancel" size={20} onClick={() => onHandleClose()} color="white" />
-          <S.MainLogo value='mainLogo' color='white' />
+          <S.CancelIcon
+            value="cancel"
+            size={20}
+            onClick={() => onHandleClose()}
+            color="white"
+          />
+          <S.MainLogo value="mainLogo" color="white" />
           <S.DescriptionBlock>
             <S.Top>
               <Text typography="t5" color="white" bold="medium">
@@ -147,48 +153,46 @@ const GalleryInfo = ({ galleryId, open: isOpen, hasEnded, close }: GalleryInfoPr
           </S.ButtonBlock>
           {data.address && (
             <S.MapBlock onClick={onHandleMap}>
-              <Icon value='mapMarker' size={20} />
-              <Text typography='t8' bold='thin' color='gray300'>{data.address}</Text> 
+              <Icon value="mapMarker" size={20} />
+              <Text typography="t8" bold="thin" color="gray300">
+                {data.address}
+              </Text>
             </S.MapBlock>
           )}
-          {data.address && openMap && (
-            <KakaoMap galleryAddress={data.address}/> 
-          )}
+          {data.address && openMap && <KakaoMap galleryAddress={data.address} />}
         </S.InfoBox>
         <S.ReviewBox>
-          <Text typography="t7" color="white" bold="thin" className='reviewText'>
+          <Text typography="t7" color="white" bold="thin" className="reviewText">
             관람객 평점
           </Text>
           <S.ScoreBlock>
             <S.ScoreWrap>
               <S.Score>
-                <Text color="white" bold="bold" typography='t3'>
+                <Text color="white" bold="bold" typography="t3">
                   {data.reviewAverage}&nbsp;
                 </Text>
-                <Text color="white" bold="bold" typography='t3'>
+                <Text color="white" bold="bold" typography="t3">
                   / 5
                 </Text>
               </S.Score>
-              <S.StarBox>
-                {starRate(data.reviewAverage)}
-              </S.StarBox>
+              <S.StarBox>{starRate(data.reviewAverage)}</S.StarBox>
               <Text
                 typography="t7"
                 color="gray300"
                 bold="thin"
-                className='reactText'
+                className="reactText"
                 onClick={() => {
                   customNavigate(`/review/${galleryId}`);
                 }}
               >
-              상세 리뷰 보기 &gt;
+                상세 리뷰 보기 &gt;
               </Text>
             </S.ScoreWrap>
             <Text
               typography="t7"
               color="gray300"
               bold="thin"
-              className='originalText'
+              className="originalText"
               onClick={() => {
                 customNavigate(`/review/${galleryId}`);
               }}

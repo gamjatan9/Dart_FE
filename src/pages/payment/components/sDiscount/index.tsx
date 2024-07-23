@@ -1,12 +1,13 @@
-import CouponPortal from '@/components/CouponPortal';
-
-import * as S from './styles';
-import { couponStore } from '@/stores/modal';
+// import { useModalStore } from '@/stores/modal';
 import { useFormContext, useWatch } from 'react-hook-form';
 import { useEffect } from 'react';
+import { ContentPortal } from '@/components';
+import CouponModal from '../couponModal';
+
+import * as S from './styles';
 
 const DiscountBox = () => {
-  const open = couponStore((state) => state.open);
+  // const { openModal, open } = useModalStore();
   const { setValue, control } = useFormContext();
   const title = useWatch({ control, name: 'title' });
   const hasTitle = useWatch({ control, name: 'title' }) ?? false;
@@ -33,15 +34,15 @@ const DiscountBox = () => {
           {title ? title : '현재 적용한 쿠폰이 없습니다.'}
         </S.CouponBlock>
         <section>
-          <S.Button onClick={open} type="button">
+          {/* <S.Button onClick={openModal} type="button">
             사용
-          </S.Button>
+          </S.Button> */}
           <S.Button onClick={couponCancel} type="button">
             취소
           </S.Button>
         </section>
       </S.Box>
-      <CouponPortal />
+      {/* <ContentPortal component={CouponModal} open={open} /> */}
     </S.Container>
   );
 };

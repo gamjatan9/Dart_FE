@@ -51,7 +51,7 @@ export interface GalleryDesc extends Gallery {
 export interface FilterType {
   keyword: string;
   category: 'hashtag' | 'author' | 'title';
-  sort: 'latest' | 'hot' | 'liked';
+  sort: 'latest' | 'liked';
   cost: 'all' | 'free' | 'pay';
   display: 'all' | 'upcoming' | 'inprogress' | 'finished';
 }

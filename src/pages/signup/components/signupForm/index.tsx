@@ -3,7 +3,7 @@ import { RegisterOptions, useFormContext } from 'react-hook-form';
 import { SignupFormLayout, SignupTextarea } from '..';
 import { ExtendedSignupForm } from '@/types/member';
 import { InputField } from '@/components';
-import { checkModalStore } from '@/stores/modal';
+import { useSignupCheckStore } from '@/stores/modal';
 import { Navigate } from 'react-router-dom';
 import SignupCheck from '../signupCheck';
 import { useEffect } from 'react';
@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 import * as S from './styles';
 
 const SignupForm = () => {
-  const open = checkModalStore((state) => state.open);
+  const open = useSignupCheckStore((state) => state.openModal);
   const {
     watch,
     register,

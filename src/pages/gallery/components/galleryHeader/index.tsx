@@ -2,7 +2,7 @@ import * as S from './styles';
 import { useEffect } from 'react';
 import GalleryLogo from '@/assets/images/galleryLogo.png';
 import { Icon } from '@/components';
-import { alertStore, chatStore } from '@/stores/modal';
+import { alertStore, useChatStore } from '@/stores/modal';
 import ReviewModal from '../reviewModal';
 import { PostReview } from '@/types/post';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
@@ -33,7 +33,7 @@ const GalleryHeader = ({
   nickName,
 }: GalleryHeaderProps) => {
   const { open, close } = useStore(alertStore);
-  const openChat = chatStore((state) => state.open);
+  const openChat = useChatStore((state) => state.openModal);
   const navigate = useCustomNavigate();
   const queryClient = useQueryClient();
   const {
@@ -91,7 +91,7 @@ const GalleryHeader = ({
         },
       });
     } else if (name === 'chat') {
-      openChat(chatRoomId, galleryNick);
+      openChat({ chatRoomId, galleryNick, open: true });
     } else if (name === 'share') {
       open({
         title: '전시 공유하기',
