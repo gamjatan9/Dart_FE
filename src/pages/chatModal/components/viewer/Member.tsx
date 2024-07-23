@@ -2,7 +2,7 @@ import Text from '@/components/Text';
 import { UserCircle } from '@/components';
 import * as S from './styles';
 import useCustomNavigate from '@/hooks/useCustomNavigate';
-import { chatStore } from '@/stores/modal';
+import { useChatStore } from '@/stores/modal';
 
 interface Props {
   name: string;
@@ -10,7 +10,7 @@ interface Props {
 }
 const Member = ({ name, profileImageUrl }: Props) => {
   const navigate = useCustomNavigate();
-  const close = chatStore((state) => state.close);
+  const close = useChatStore((state) => state.closeModal);
   return (
     <S.Box>
       <S.Block

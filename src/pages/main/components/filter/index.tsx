@@ -1,28 +1,30 @@
-import { Icon, Text } from '@/components';
-import { ButtonBar, CostFilter, KeywordFilter } from '..';
 import {
   costButtonInfo,
   displayButtonInfo,
   searchButtonInfo,
   sortButtonInfo,
 } from '@/consts/filter';
-import { filterStore } from '@/stores/filter';
-import { pageStore } from '@/stores/page';
 import { useEffect } from 'react';
-import { categoryModalStore } from '@/stores/modal';
+import { Icon, Text } from '@/components';
+import { pageStore } from '@/stores/page';
+import { filterStore } from '@/stores/filter';
+import { ButtonBar, CostFilter, KeywordFilter } from '..';
 
 import * as S from './styles';
+import { useBaseModalStore } from '@/stores/modal';
 
 const Filter = () => {
   const { filterValue, costArray, onChange, onNestingChange, onReset } = filterStore();
-  const open = categoryModalStore((state) => state.open);
+  const openModal = useBaseModalStore((state) => state.openModal);
   const resetPageInfo = pageStore((state) => state.resetPageInfo);
+
   useEffect(() => {
     resetPageInfo();
-  }, [filterValue, costArray]);
+  }, [filterValue, costArray, resetPageInfo]);
+
   useEffect(() => {
     return () => onReset();
-  }, []);
+  }, [onReset]);
   return (
     <S.Container className="filter-container">
       <S.FilterBox>
@@ -54,7 +56,7 @@ const Filter = () => {
           onChange={onChange}
         />
       </S.FilterBox>
-      <S.filterIcon value="showFilter" size={25} onClick={open} />
+      <S.filterIcon value="showFilter" size={25} onClick={() => openModal({})} />
     </S.Container>
   );
 };

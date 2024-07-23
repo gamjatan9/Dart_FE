@@ -1,13 +1,13 @@
 import { Icon, Text } from '@/components';
 import { DisplayInfoType, SortInfoType } from '@/consts/filter';
-import { FilterType } from '@/types/gallery';
+import { DispalyValues, FilterType, SortValues } from '@/types/gallery';
+import { useState } from 'react';
 
 import * as S from './styles';
-import { useState } from 'react';
 
 interface ButtonBarProps {
   title: string;
-  selected: string;
+  selected: DispalyValues | SortValues;
   keyPorp: 'display' | 'sort';
   onChange: (newValue: Partial<FilterType>) => void;
   buttons: SortInfoType[] | DisplayInfoType[];

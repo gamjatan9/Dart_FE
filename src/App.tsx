@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { GalleryInfoPortal, GlobalBoundary, Navbar } from '@/components';
+import { GlobalBoundary, Navbar } from '@/components';
 import { routes } from './routes';
 import ProtectedRoute from './routes/ProtectedRoute';
 import TanstackProvider from './routes/TanstackProvider';
@@ -37,9 +37,9 @@ function App() {
           })}
         </Routes>
 
-        <Routes>
+        {/* <Routes>
           <Route path="/info/:galleryId" element={<GalleryInfoPortal />} />
-        </Routes>
+        </Routes> */}
       </GlobalBoundary>
     </TanstackProvider>
   );

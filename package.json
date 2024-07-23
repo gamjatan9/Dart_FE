@@ -11,7 +11,8 @@
     "format:fix": "prettier --write ./src",
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
-    "deploy": "aws s3 sync ./dist s3://goormide-lucky7-bucket --profile=goorm-kangsinbeom"
+    "deploy": "aws s3 sync ./dist s3://goormide-lucky7-bucket --profile=goorm-kangsinbeom",
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

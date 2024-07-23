@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { chatStore } from '@/stores/modal';
+import { useChatStore } from '@/stores/modal';
 import Text from '@/components/Text';
 import ChatMenu from './components/chat/ChatMenu';
 import ViewerMenu from './components/viewer/ViewerMenu';
@@ -14,7 +14,7 @@ export interface ChatProps {
 }
 
 const ChatModal = ({ open, chatRoomId, galleryNick }: ChatProps) => {
-  const close = chatStore((state) => state.close);
+  const close = useChatStore((state) => state.closeModal);
   const navigate = useCustomNavigate();
   const isLogin = !!memberStore((state) => state.accessToken);
   const [menuDown, setMenuDown] = useState(false);
