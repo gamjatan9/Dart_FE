@@ -34,85 +34,125 @@
 ### 📌 인트로
 
 - 전체적으로 어떤 서비스인지를 간략한 소개와 함께 나타내었습니다.
+
+<br/>
+
 ![49](https://github.com/user-attachments/assets/882e0624-fb18-4f32-8aa1-f570ee0fc400)
 
+<br/>
 
 ### 📌 메인
 
 - 검색 기능과 페이징처리된 전시장을 제공하여 사용자가 원하는 전시를 빠르게 찾을 수 있도록 도와줍니다.
-  ![50](https://github.com/user-attachments/assets/85bb206e-d109-45d3-a6ed-85e8c530eac6)
 
+<br/>
+
+![50](https://github.com/user-attachments/assets/85bb206e-d109-45d3-a6ed-85e8c530eac6)
+
+<br/>
 
 ### 📌 로그인 / 회원가입
 
 - 소셜로그인을 비롯한 이메일 인증을 통한 회원가입 및 로그인을 이용할 수 있으며, 저작권과 관련된 약관 동의 내용을 받습니다.
+
+<br/>
+
   ![51](https://github.com/user-attachments/assets/5a54e298-5d47-4aa2-82d1-f772a1ea93b6)
 
+<br/>
 
 ### 📌 온라인 전시장
 
 - 5개의 다양한 템플릿을 통해 유저에게 재미를 선사하며, 나만의 전시장을 통해 직접 예술가가 될 수 있는 공간입니다.
+
  ![52](https://github.com/user-attachments/assets/d041aba5-56d2-4ba5-9fcc-909ab9bd0d85)
 
+<br/>
 
 ### 📌 전시 생성
 
 - 나만의 전시장을 직접적으로 만들 수 있습니다.
+
+<br/>
+
  ![53](https://github.com/user-attachments/assets/24487137-b718-4d57-a28a-281bd34c8902)
 
+<br/>
 
 ### 📌 결제
 
 - 카카오 결제를 이용해서 유료 전시 생성 및 전시 입장료를 지불하여 좀 더 많은 프리미엄 혜택을 누릴 수 있습니다.
 - 실제 결제되는 내용이 아닌 데모 결제로 이루어져 있습니다.
+
+<br/>
+
 ![54](https://github.com/user-attachments/assets/30fb647f-d8c0-4f41-8d9a-4588427167e6)
 
+<br/>
 
 ### 📌 쿠폰 발급 및 적용
 
 - 이벤트를 통해 발급 받은 쿠폰을 통해서 좀 더 쉽게 서비스에 접근해 볼 수 있습니다.
+
+<br/>
+
 <img width="1508" alt="image" src="https://github.com/user-attachments/assets/5bad2c71-638f-44ee-b63a-fd36eb18a5a0">
 
-
+<br/>
 
 
 ### 📌 실시간 채팅 서비스
 
 - 전시를 감상하며 현재 해당 전시를 관람하고 있는 사람을 확인할 수 있습니다.
 - 관람객과 얘기를 나눌 수도, 작가의 안내를 받을 수도 있습니다.
+
+<br/>
+
+
 ![56](https://github.com/user-attachments/assets/1c446268-09d8-4d74-9052-a0de6bb7d99c)
 
-  
+<br/>
 
 ### 📌 리뷰 및 공유하기
 
 - 즐겁게 본 전시가 있다면 전시에 대한 후기를 작성할 수 있으며, 이를 다른 사람들과 공유하여 즐거운 시간을 보낼 수 있습니다.
-  ![57](https://github.com/user-attachments/assets/19a374c1-ea77-4903-ade5-f19643f5646f)
 
+<br/>
+
+ <img width="1330" alt="image" src="https://github.com/user-attachments/assets/7844e5b8-79ad-4cd5-9efd-9ac3f6a6c9d6">
+
+<br/>
 
 ### 📌 마이페이지 / 유저 정보 변경
 
 - 내 정보를 변경하여 다른 사람들에게 좀 더 나를 어필할 수 있으며, 내가 개최한 전시와 결제한 정보를 조회할 수 있습니다.
+
+<br/>
+
  <img width="1547" alt="image" src="https://github.com/user-attachments/assets/6109fb89-cfa8-4f8d-9967-e8bc1e1a8573">
 <img width="1227" alt="image" src="https://github.com/user-attachments/assets/6d0f8a57-2a89-458f-b068-33051bc11ea9">
-
-
 
  
 
   ### 📌 반응형 웹 디자인
 
 - 반응형 웹 디자인을 통해 모바일, 태블릿, 데스트톱 어디서든 서비스를 즐길 수 있습니다.
+
+<br/>
+
   ![60](https://github.com/user-attachments/assets/2ce310b0-78e6-4e33-9b02-1d224e1baba6)
 
+<br/>
 
   ### 📌 기타 주요 페이지
 
 - 개발자들의 정보 및 404 페이지 등등...
+
+<br/>
+
  <img width="1584" alt="image" src="https://github.com/user-attachments/assets/8fa4410e-dd6e-4801-aacd-b46bdb5c1a69">
 
-
-
+<br/>
 <br/>
 
 
